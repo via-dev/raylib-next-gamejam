@@ -24,10 +24,10 @@ game: GameAPI
 
 main :: proc() {
 	rl.SetConfigFlags({.WINDOW_RESIZABLE, .VSYNC_HINT})
-	rl.InitWindow(1280, 720, "Hello World!")
+	rl.InitWindow(800, 600, "JAMGAME")
 	defer rl.CloseWindow()
 
-	rl.SetTargetFPS(144)
+	rl.SetTargetFPS(200)
 
 	if !load_game_api(&game) {
 		fmt.eprintf("Uh oh...")

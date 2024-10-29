@@ -30,12 +30,10 @@ draw :: proc() {
 	rl.BeginDrawing()
 	rl.ClearBackground(rl.BLACK)
 
-	rect := Rect {
-		g_state.player_pos.x,
-		g_state.player_pos.y,
-		100, 100,
-	}
-	rl.DrawRectangleRec(rect, rl.GREEN)
+	rl.DrawText("Hellope!", 200, rl.GetScreenHeight() / 2, 100, rl.WHITE)
+
+	rect := Rect{g_state.player_pos.x, g_state.player_pos.y, 50, 50}
+	rl.DrawRectangleRec(rect, rl.RED)
 
 	rl.EndDrawing()
 }
